@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - FinTrack</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Welcome to FinTrack</h1>
+            <p>Your personalized financial tracker.</p>
+        </header>
+
+        <!-- Dashboard Overview -->
+        <section class="dashboard">
+            <div class="overview-card">
+                <h2>Monthly Summary</h2>
+                <p>Month: January</p>
+                <p>Expense: ₹25,000</p>
+                <p>Increase: <span class="increase">10%</span> from last month</p>
+            </div>
+            <div class="overview-card">
+                <h2>Balance</h2>
+                <p>₹75,000</p>
+            </div>
+            <div class="overview-card">
+                <h2>Income & Expenses</h2>
+                <p>Income: ₹1,00,000</p>
+                <p>Expense: ₹25,000</p>
+            </div>
+        </section>
+
+        <!-- Latest Transactions -->
+        <section class="transactions">
+            <h2>Latest Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Note</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Groceries</td>
+                        <td>₹2,500</td>
+                        <td>Food</td>
+                        <td>Expense</td>
+                        <td>02 Jan 2025</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add dynamic rows here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add Transaction Button -->
+        <section class="add-transaction-btn">
+            <a href="addtransaction.html" class="add-btn">+ Add Transaction</a>
+        </section>
+
+        <!-- Personal Details -->
+        <section class="personal-details">
+            <h2>Your Details</h2>
+            <form action="/FinTrack/servlets/UpdateDetailsServlet" method="POST" class="details-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" value="John Doe" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+                <button type="submit" class="update-btn">Update</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
